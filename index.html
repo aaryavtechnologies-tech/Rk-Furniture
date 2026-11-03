@@ -20,7 +20,7 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛋️</text></svg>">
+  <link rel="icon" type="image/png" href="assets/images/logo.png?v=2">
 </head>
 <body>
 
@@ -28,11 +28,9 @@
   <header class="site-header site-header-compact" id="header">
     <div class="container header-container">
       
-      <!-- Brand Monogram & Name (Single Clean Line) -->
+      <!-- Brand Logo & Name -->
       <a href="#home" class="brand-logo" aria-label="R.K. Furniture Home">
-        <div class="brand-crest-box" aria-hidden="true">
-          <span>RK</span>
-        </div>
+        <img src="assets/images/logo.png?v=2" alt="R.K. Furniture Logo" class="brand-logo-img">
         <div class="brand-text-col">
           <span class="brand-name">R.K. Furniture</span>
         </div>
@@ -43,6 +41,7 @@
         <ul class="nav-list">
           <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
           <li class="nav-item"><a href="#craft" class="nav-link">Craftsmanship</a></li>
+          <li class="nav-item"><a href="#videos" class="nav-link">Videos</a></li>
           <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
           <li class="nav-item"><a href="#configurator" class="nav-link">Custom Quote</a></li>
           <li class="nav-item"><a href="#proprietor" class="nav-link">Proprietor</a></li>
@@ -302,7 +301,141 @@
       </div>
     </section>
 
-    <!-- SECTION 3: PRODUCT GALLERY (100% Unique Pieces, Zero Duplicates) -->
+    <!-- SECTION 3: LIVE WORKSHOP VIDEOS (Autoplay Video Showcase) -->
+    <section class="video-section" id="videos" aria-label="Live Workshop Videos">
+      <div class="video-ambient-glow" aria-hidden="true"></div>
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <div class="section-eyebrow">Direct From Our Saharanpur Atelier</div>
+          <h2 class="section-title">Live Workshop in Action</h2>
+          <p class="section-subtitle">
+            Watch real workshop recordings of our handcrafted furniture. High-definition video clips showing our royal carved chairs and luxury center table in motion.
+          </p>
+        </div>
+
+        <div class="video-grid">
+          
+          <!-- Video Card 1: Chair 1 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video 
+                class="showcase-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                preload="auto"
+              >
+                <source src="assets/video/chair-1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video-badge">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span>Live Atelier Clip</span>
+              </div>
+              <button type="button" class="video-mute-btn" aria-label="Toggle sound" title="Toggle audio">
+                <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </button>
+              <div class="video-play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="44" height="44" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-info-content">
+              <span class="video-category">Royal Armchair &bull; Solid Hardwood</span>
+              <h3 class="video-card-title">Royal Carved Armchair (Style 1)</h3>
+              <p class="video-card-desc">Detailed workshop walkthrough showcasing deep-relief acanthus leaf carving, arched backrest crest, and royal teak polish.</p>
+              <div class="video-action-row">
+                <a href="https://wa.me/919962271729?text=Hello%20R.K.%20Furniture,%20I%20am%20inquiring%20about%20the%20Royal%20Carved%20Armchair%20(Style%201)%20seen%20in%20your%20workshop%20video." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                  Inquire On WhatsApp
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 2: Chair 2 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video 
+                class="showcase-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                preload="auto"
+              >
+                <source src="assets/video/chair-2.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video-badge">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span>Live Atelier Clip</span>
+              </div>
+              <button type="button" class="video-mute-btn" aria-label="Toggle sound" title="Toggle audio">
+                <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </button>
+              <div class="video-play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="44" height="44" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-info-content">
+              <span class="video-category">Imperial Throne &bull; High Back</span>
+              <h3 class="video-card-title">Ornate Palace Throne Chair (Style 2)</h3>
+              <p class="video-card-desc">Monumental high-back throne chair with baroque crown chiseling, flared scroll armrests, and 100% seasoned timber joinery.</p>
+              <div class="video-action-row">
+                <a href="https://wa.me/919962271729?text=Hello%20R.K.%20Furniture,%20I%20am%20inquiring%20about%20the%20Ornate%20Palace%20Throne%20Chair%20(Style%202)%20seen%20in%20your%20workshop%20video." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                  Inquire On WhatsApp
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Video Card 3: Table 1 -->
+          <article class="video-card">
+            <div class="video-media-wrap">
+              <video 
+                class="showcase-video" 
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                preload="auto"
+              >
+                <source src="assets/video/table-1.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+              <div class="video-badge">
+                <span class="live-dot" aria-hidden="true"></span>
+                <span>Live Atelier Clip</span>
+              </div>
+              <button type="button" class="video-mute-btn" aria-label="Toggle sound" title="Toggle audio">
+                <svg class="icon-muted" viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                <svg class="icon-unmuted" viewBox="0 0 24 24" width="20" height="20" fill="currentColor" style="display:none;"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+              </button>
+              <div class="video-play-overlay" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="44" height="44" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+            </div>
+            <div class="video-info-content">
+              <span class="video-category">Royal Living &bull; Handcrafted</span>
+              <h3 class="video-card-title">Heritage Carved Center Table</h3>
+              <p class="video-card-desc">Opulent solid wood center table featuring hand-carved floral apron border, scalloped edges, and sturdy sculpted pedestals.</p>
+              <div class="video-action-row">
+                <a href="https://wa.me/919962271729?text=Hello%20R.K.%20Furniture,%20I%20am%20inquiring%20about%20the%20Heritage%20Carved%20Center%20Table%20seen%20in%20your%20workshop%20video." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+                  Inquire On WhatsApp
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 4: PRODUCT GALLERY (100% Unique Pieces, Zero Duplicates) -->
     <section class="gallery-section" id="gallery" aria-label="Product Gallery">
       <div class="container">
         
@@ -632,12 +765,12 @@
     <section class="proprietor-section" id="proprietor" aria-label="Meet the Proprietor">
       <div class="container proprietor-container">
         
-        <!-- Proprietor Image (Real Workshop Photo with Royal Bed) -->
+        <!-- Proprietor Image -->
         <div class="proprietor-visual">
           <div class="proprietor-frame">
             <img 
-              src="assets/images/real-kaleem-bed.jpg" 
-              alt="Kaleem, Proprietor of R.K. Furniture standing with handcrafted royal bed in Saharanpur workshop" 
+              src="assets/images/real-kaleem.jpg" 
+              alt="Kaleem, Proprietor of R.K. Furniture" 
               class="proprietor-img"
               loading="lazy"
             >
@@ -978,7 +1111,10 @@
       <!-- Bottom Bar -->
       <div class="footer-bottom-bar">
         <div class="container footer-bottom-container">
-          <p class="copyright-text">&copy; 2026 R.K. Furniture, All Rights Reserved.</p>
+          <div class="footer-brand-wrap">
+            <img src="assets/images/logo.png?v=2" alt="R.K. Furniture Logo" class="footer-logo-img">
+            <p class="copyright-text">&copy; 2026 R.K. Furniture, All Rights Reserved.</p>
+          </div>
           <div class="footer-bottom-links">
             <span>Specialist in Royal Wood Carving Furniture</span>
             <span class="sep">&bull;</span>

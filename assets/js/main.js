@@ -777,4 +777,90 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // -------------------------------------------------------------------------
+  // 12. Live Workshop Video Showcase Controller (Autoplay + Mute/Play Controls)
+  // -------------------------------------------------------------------------
+  const videoCards = document.querySelectorAll('.video-card');
+
+  videoCards.forEach((card) => {
+    const video = card.querySelector('.showcase-video');
+    const wrap = card.querySelector('.video-media-wrap');
+    const muteBtn = card.querySelector('.video-mute-btn');
+    const iconMuted = muteBtn ? muteBtn.querySelector('.icon-muted') : null;
+    const iconUnmuted = muteBtn ? muteBtn.querySelector('.icon-unmuted') : null;
+
+    if (!video) return;
+
+    // Guarantee autoplay attributes
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.autoplay = true;
+
+    // Initial play attempt
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        card.classList.add('is-paused');
+      });
+    }
+
+    // Toggle Play/Pause on video click
+    if (wrap) {
+      wrap.addEventListener('click', (e) => {
+        if (e.target.closest('.video-mute-btn')) return;
+
+        if (video.paused) {
+          video.play().catch(() => {});
+          delete card.dataset.manuallyPaused;
+          card.classList.remove('is-paused');
+        } else {
+          video.pause();
+          card.dataset.manuallyPaused = 'true';
+          card.classList.add('is-paused');
+        }
+      });
+    }
+
+    // Toggle Sound on mute button click
+    if (muteBtn) {
+      muteBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        if (video.muted) {
+          if (iconMuted) iconMuted.style.display = 'block';
+          if (iconUnmuted) iconUnmuted.style.display = 'none';
+        } else {
+          if (iconMuted) iconMuted.style.display = 'none';
+          if (iconUnmuted) iconUnmuted.style.display = 'block';
+        }
+      });
+    }
+
+    // Update is-paused class based on native events
+    video.addEventListener('play', () => card.classList.remove('is-paused'));
+    video.addEventListener('pause', () => card.classList.add('is-paused'));
+  });
+
+  // IntersectionObserver to auto-play when in viewport and pause when out of view
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        const video = entry.target.querySelector('.showcase-video');
+        if (!video) return;
+        if (entry.isIntersecting) {
+          if (video.paused && !entry.target.dataset.manuallyPaused) {
+            video.play().catch(() => {});
+          }
+        } else {
+          if (!video.paused) {
+            video.pause();
+          }
+        }
+      });
+    }, { threshold: 0.25 });
+
+    videoCards.forEach((card) => videoObserver.observe(card));
+  }
+
 });
