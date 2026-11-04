@@ -2746,3 +2746,9 @@ ul {
     display: none;
   }
 }
+
+@media (max-width: 1200px) {
+  .header-phone-secondary {
+    display: none;
+  }
+}

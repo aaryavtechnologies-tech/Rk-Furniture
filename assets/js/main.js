@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
-  const workshopPhone = '919962271729';
+  const workshopPhone = '919952271729';
 
   // -------------------------------------------------------------------------
   // 2. Navigation & Mobile Menu Toggle
@@ -328,9 +328,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const overlayTitle = card.querySelector('.overlay-title')?.textContent?.toLowerCase() || '';
 
       const matchesCategory = (currentCategory === 'all' || cardCategory === currentCategory);
-      const matchesSearch = !searchQuery || 
-        cardTitle.includes(searchQuery) || 
-        overlayDesc.includes(searchQuery) || 
+      const matchesSearch = !searchQuery ||
+        cardTitle.includes(searchQuery) ||
+        overlayDesc.includes(searchQuery) ||
         overlayTitle.includes(searchQuery) ||
         cardCategory.includes(searchQuery);
 
@@ -438,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Lookup base price
     const base = priceMatrix[type]?.[wood] || { min: 50000, max: 70000, retailMin: 110000, retailMax: 140000, days: '18 – 24 Days' };
-    
+
     // Add finishing factor
     let finishDelta = 0;
     if (finish.includes('Gold Leaf')) {
@@ -527,7 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openProductModal(productId) {
     const item = productData[productId] || productData['1'];
-    
+
     if (dialogImg) {
       dialogImg.src = item.image;
       dialogImg.alt = item.title;
@@ -811,7 +811,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.target.closest('.video-mute-btn')) return;
 
         if (video.paused) {
-          video.play().catch(() => {});
+          video.play().catch(() => { });
           delete card.dataset.manuallyPaused;
           card.classList.remove('is-paused');
         } else {
@@ -850,7 +850,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!video) return;
         if (entry.isIntersecting) {
           if (video.paused && !entry.target.dataset.manuallyPaused) {
-            video.play().catch(() => {});
+            video.play().catch(() => { });
           }
         } else {
           if (!video.paused) {

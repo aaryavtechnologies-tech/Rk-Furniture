@@ -24,3 +24,9 @@ npx serve .
 python -m http.server 3000
 ```
 Open `http://localhost:3000` in your browser.
+
+## Contact & Atelier Inquiries
+- **Primary / WhatsApp**: +91 9952271729
+- **Secondary Phone**: +91 8958651860
+- **Email**: rfurniture411@gmail.com
+- **Workshop**: H. No. 4/845, Chilkana Road, Zafar Nawaz, Saharanpur - 247001, Uttar Pradesh, India
